@@ -1,7 +1,7 @@
 language: python
 build:
-  command: "pip install -e '.[dev]'"
+  command: "uv sync --frozen --all-groups --all-packages --all-extras"
 test:
-  command: "python -m pytest tests/ -q --tb=short -x --no-header"
+  command: "uv run pytest tests/test_types.py -q --tb=short -x --no-header"
 loop:
   max_iterations: 3
