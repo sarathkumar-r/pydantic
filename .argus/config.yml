@@ -1,6 +1,6 @@
 language: python
 build:
-  command: "uv sync --frozen --all-groups --all-packages --all-extras"
+  command: "uv sync --frozen --group dev --all-packages"
 test:
   command: "uv run pytest tests/test_types.py -q --tb=short -x --no-header"
 loop:
