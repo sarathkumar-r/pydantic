@@ -239,7 +239,7 @@ def conint(
     ]
 
 
-PositiveInt = Annotated[int, annotated_types.Gt(0)]
+PositiveInt = Annotated[int, annotated_types.Ge(0)]
 """An integer that must be greater than zero.
 
 ```python
