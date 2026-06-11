@@ -1,0 +1,7 @@
+language: python
+build:
+  command: "pip install -e '.[dev]'"
+test:
+  command: "python -m pytest tests/ -q --tb=short -x --no-header"
+loop:
+  max_iterations: 3
